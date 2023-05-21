@@ -30,6 +30,8 @@ jobs:
 #      with:
 #        swift-version: '5.8'
 #    - uses: YOCKOW/Action-setup-swift@v1
+    - name: Setup Swift
+      uses: swift-actions/setup-swift@v1
     - name: Generate Docs
       uses: fwcd/swift-docc-action@v1
       with:
