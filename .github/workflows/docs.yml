@@ -28,15 +28,16 @@ jobs:
     - name: Set up Swift
       uses: fwal/setup-swift@v1
       with:
-        swift-version: '5.6'
+        swift-version: '5.8'
+#    - uses: YOCKOW/Action-setup-swift@v1
     - name: Generate Docs
       uses: fwcd/swift-docc-action@v1
       with:
-        target: LighthouseClient
+        target: LegacyLogger
         output: ./public
         transform-for-static-hosting: 'true'
         disable-indexing: 'true'
-        hosting-base-path: lighthouse-swift
+#        hosting-base-path: lighthouse-swift
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
